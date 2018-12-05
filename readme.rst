@@ -153,8 +153,10 @@ vi /etc/network/interface
         ================================
         auto eth1
             iface eth1 inet manual
-            up ifconfig eth1 promisc up
-            down ifconfig eth1 promisc down
+            up ifconfig eth1 0.0.0.0 up
+            up link set eth1 promisc on
+            down ip link set eth1 promisc off
+            down ifconfig eth1 down
             
 ===================
 = safe file in vi =

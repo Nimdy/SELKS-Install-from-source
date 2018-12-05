@@ -1,6 +1,6 @@
-=====
-SELKS ver5
-=====
+============================
+SELKS Ver5 Build from Source
+============================
 
 Intro
 =====
@@ -13,20 +13,20 @@ Their GITHUB is: https://github.com/StamusNetworks
 Their SELKS WIKI: https://github.com/StamusNetworks/SELKS
 
 
-=============
+==============================================================================================================================
 This is a how-to about installing SELKS from source and not from ISO, if you wish to use ISO:
 
 You can download ready to use images from the `SELKS download page <https://www.stamus-networks.com/open-source/#selks>`_.
-    
-How to run SELKS
-===============
+
+==============================================================================================================================
+
 
 Prerequisites
--------------
+=============
 Debian 9.5+ Stretch
 2CPU / 8+ GB RAM (More RAM the better 16+)
 Two NIC cards: One for management access and the other one for monitoring
-
+Coffee.... lots of coffee 
 
 How to install
 ==============

@@ -10,6 +10,8 @@ released under GPLv3 from Stamus Networks (https://www.stamus-networks.com/).
 
 Their GITHUB is: https://github.com/StamusNetworks
 
+Their SELKS WIKI: https://github.com/StamusNetworks/SELKS
+
 
 =============
 This is a how-to about installing SELKS from source and not from ISO, if you wish to use ISO:
@@ -119,6 +121,7 @@ https://ipofSELKSinstall
 Click Dashboards
 
 Click logstash-* 
+
         Set as default index by clicking the star icon
         
 Click Dashboards 
@@ -126,8 +129,16 @@ Click Dashboards
         Click SN-ALL
         
 
-        
+Test Suricata is working
+=========================
+
+curl testmyids.com
+
+Visit Scirius dashboard and review alert.
+ 
 
 
-NOT COMPLETE ADDING MORE
+NOT COMPLETE ADDING MORE 
+
+Need to format to Markup....
 

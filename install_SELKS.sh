@@ -15,7 +15,7 @@ libyaml-0-2 libyaml-dev zlib1g zlib1g-dev libcap-ng-dev libcap-ng0 make flex bis
 libnuma-dev pkg-config libnetfilter-queue-dev libnetfilter-queue1 libnfnetlink-dev libnfnetlink0  libjansson-dev \
 libjansson4 libnss3-dev libnspr4-dev libgeoip1 libgeoip-dev rsync mc python-daemon libnss3-tools curl net-tools \
 python-crypto libgmp10 libyaml-0-2 python-simplejson python-pygments python-yaml ssh sudo tcpdump nginx openssl jq patch \
-python-pip debian-installer-launcher live-build apt-transport-https
+python-pip debian-installer-launcher live-build apt-transport-https ethtool
 
 set -ex
 

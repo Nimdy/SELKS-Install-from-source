@@ -50,17 +50,19 @@ mkdir -p  /opt/selks/
 
 ##ADD required deps
 
-sudo apt-get install libpcre3 libpcre3-dbg libpcre3-dev ntp build-essential autoconf automake libtool libpcap-dev libnet1-dev \ 
-libyaml-0-2 libyaml-dev zlib1g zlib1g-dev libcap-ng-dev libcap-ng0 make flex bison git git-core libmagic-dev \ 
-libnuma-dev pkg-config libnetfilter-queue-dev libnetfilter-queue1 libnfnetlink-dev libnfnetlink0  libjansson-dev \ 
-libjansson4 libnss3-dev libnspr4-dev libgeoip1 libgeoip-dev rsync mc python-daemon libnss3-tools curl net-tools \ 
-python-crypto libgmp10 libyaml-0-2 python-simplejson python-pygments python-yaml ssh sudo tcpdump nginx openssl jq patch \ 
+apt-get update && \
+
+apt-get install -y libpcre3 libpcre3-dbg libpcre3-dev ntp build-essential autoconf automake libtool libpcap-dev libnet1-dev \
+libyaml-0-2 libyaml-dev zlib1g zlib1g-dev libcap-ng-dev libcap-ng0 make flex bison git git-core libmagic-dev \
+libnuma-dev pkg-config libnetfilter-queue-dev libnetfilter-queue1 libnfnetlink-dev libnfnetlink0  libjansson-dev \
+libjansson4 libnss3-dev libnspr4-dev libgeoip1 libgeoip-dev rsync mc python-daemon libnss3-tools curl net-tools \
+python-crypto libgmp10 libyaml-0-2 python-simplejson python-pygments python-yaml ssh sudo tcpdump nginx openssl jq patch \
 python-pip debian-installer-launcher live-build apt-transport-https
   
 
 ### START JAVA for ELK ###
 
-apt-get update && \
+
 apt-get install -y ca-certificates-java openjdk-8-jre-headless \
 openjdk-8-jdk openjdk-8-jre openjdk-8-jre-headless
 

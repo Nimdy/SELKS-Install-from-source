@@ -1,9 +1,6 @@
-==================================================================================
-=SELKS Ver5 Build from Source for AWS and AZURE Cloud Network Security Monitoring=
-==================================================================================
-
-Intro
-=====
+====================================================================================
+= SELKS Ver5 Build from Source for AWS and AZURE Cloud Network Security Monitoring =
+====================================================================================
 
 SELKS is a free and open source Debian (with LXDE X-window manager) based IDS/IPS platform 
 released under GPLv3 from Stamus Networks (https://www.stamus-networks.com/).
@@ -20,51 +17,63 @@ Their SELKS WIKI: https://github.com/StamusNetworks/SELKS
 =                                                                                                                              =                 
 ================================================================================================================================
 
+=================
+= Prerequisites =
+=================
 
-Prerequisites
-=============
 Debian 9.5+ Stretch
 2CPU / 8+ GB RAM (More RAM the better 16+)
 Two NIC cards: One for management access and the other one for monitoring
 Coffee.... lots of coffee 
 
-How to install
-==============
+==================
+= How to install =
+==================
 
-
-Update and upgrade debian
-=========================
+=============================
+= Update and upgrade debian =
+=============================
 
 apt-get update
 apt-get upgrade
 
-Install GIT
-========================
+===============
+= Install GIT =
+===============
+
 sudo apt-get install -y git
 
-Change directory to OPT
-=======================
+===========================
+= Change directory to OPT =
+===========================
+
 cd /opt/
 
-Pull GIT from Nimdy
-===================
+=======================
+= Pull GIT from Nimdy =
+=======================
 
 git clone https://github.com/Nimdy/SELKS-Install-from-source.git
 
-Change directory
-================
+====================
+= Change directory =
+====================
 
 cd /SELKS-Install-from-source
 
-Change permissions to execute script
-====================================
+========================================
+= Change permissions to execute script =
+========================================
 
 sudo chmod -x install_SELKS.sh
 
-Select "Yes" for Scirius database configuration
+During install you might be asked a question about Scirius database related information:
 
-After Install
-=============
+        Select "Yes" for Scirius database configuration
+
+=================================
+= After Succesfull Installation =
+=================================
 
 Reboot and login to the system
 
@@ -72,24 +81,25 @@ Change root password, if required. Default password is StamusNetworks.
 
 cd /opt/selks/Scripts/Setup
 
+========================================================
+= Setup interface and mon Full Packet Capture settings =
+========================================================
 
-Setup interface and mon Full Packet Capture settings
-====================================================
 ./selks-first-time-setup.sh
         
-        ======================================================
-        =Select interface you wish to receive network traffic=
-        ======================================================
+        ========================================================
+        =S elect interface you wish to receive network traffic =
+        ========================================================
         ie: eth1
-        ===================
-        =Set PCAP Settings=
-        ===================
+        =====================
+        = Set PCAP Settings =
+        =====================
         ie: option 1
         
 
-
-Verfiy services are running
-===========================
+===============================
+= Verfiy services are running =
+===============================
 
 systemctl status kibana logstash elasticsearch suricata
 
@@ -99,21 +109,21 @@ systemctl status kibana logstash elasticsearch suricata
         systemctl restart kibana 
         systemctl status kibana 
         
-================================
-=Configure HOMENET for Suricata=
-================================
+==================================
+= Configure HOMENET for Suricata =
+==================================
 
 vi /etc/suricata/suricata.yaml
 
         Edit to reflect network range monitored:   HOME_NET: '[192.168.0.0/16,10.0.0.0/8,172.16.0.0./12]"
-       =============================================
-       =Restart suricata service to reflect changes=
-       =============================================
+       ===============================================
+       = Restart suricata service to reflect changes =
+       ===============================================
         systemctl restart suricata
         
-===================================================================================        
-=Visit SELKS Scirius Dashboards to verify dashboards are setup and populating data=
-===================================================================================
+=====================================================================================        
+= Visit SELKS Scirius Dashboards to verify dashboards are setup and populating data =
+=====================================================================================
 
 https://ipofSELKSinstall
 
@@ -127,17 +137,17 @@ Click Dashboards
 
         Click SN-ALL
         
-
-Test Suricata is working
-=========================
+============================
+= Test Suricata is working =
+============================
 
 curl testmyids.com
 
 Visit Scirius dashboard and review alert.
  
-=======================================
-=Validate interface is in promisc mode=
-=======================================
+=========================================
+= Validate interface is in promisc mode =
+=========================================
 
 ifconfig
 

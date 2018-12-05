@@ -145,40 +145,40 @@ curl testmyids.com
 
 Visit Scirius dashboard and review alert.
  
-=========================================
-= Validate interface is in promisc mode =
-=========================================
+        =========================================
+        = Validate interface is in promisc mode =
+        =========================================
 
-ifconfig
+        ifconfig
 
-if interface does not say promisc, then set it manually.
+        if interface does not say promisc, then set it manually.
 
-=====================================
-= Configure /etc/network/interfaces =
-=====================================
-vi /etc/network/interface
+        =====================================
+        = Configure /etc/network/interfaces =
+        =====================================
+        vi /etc/network/interface
 
-        ================================
-        = Replace or add the following =
-        ================================
-        auto eth1
-            iface eth1 inet manual
-            up ifconfig eth1 0.0.0.0 up
-            up link set eth1 promisc on
-            down ip link set eth1 promisc off
-            down ifconfig eth1 down
+                ================================
+                = Replace or add the following =
+                ================================
+                auto eth1
+                  iface eth1 inet manual
+                  up ifconfig eth1 0.0.0.0 up
+                  up link set eth1 promisc on
+                  down ip link set eth1 promisc off
+                 down ifconfig eth1 down
             
-===================
-= safe file in vi =
-===================
-:wq!
+                        ===================
+                        = safe file in vi =
+                        ===================
+                        :wq!
 
 
-======================
-= restart networking =
-======================
+        ======================
+        = restart networking =
+        ======================
 
-systemctl restart networking
+        systemctl restart networking
 
 
 

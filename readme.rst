@@ -173,7 +173,9 @@ systemctl restart networking
 
 
 
-NOT COMPLETE ADDING MORE 
+not complete be instructions will get system running.  The hardest thing is ensuring that you are receiving traffic on the interface you setup. If you need help just ask... but please use your google before asking... learning how to deploy a IDS on a system with ELK is awesome but sometimes you run into errors.  Most of these errors can be fixed by googling and fixing some type of config file.
+
+
 
 Need to format to Markup....
 

@@ -44,8 +44,8 @@ Change directory to OPT
 =======================
 cd /opt/
 
-*Pull GIT from Nimdy*
-*===================*
+Pull GIT from Nimdy
+===================
 
 git clone https://github.com/Nimdy/SELKS-Install-from-source.git
 
@@ -59,13 +59,37 @@ Change permissions to execute script
 
 sudo chmod -x install_SELKS.sh
 
+Select "Yes" for Scirius database configuration
+
 After Install
 =============
 
 Reboot and login to the system
 
-cd /SELKS
+Change root password, if required. Default password is StamusNetworks.
+
+cd /opt/selks/Scripts/Setup
 
 
-ADDAING MORE
+Setup interface and mon Full Packet Capture settings
+====================================================
+./selks-first-time-setup.sh
+
+        Select interface you wish to receive network traffic
+        ====================================================
+        ie: eth1
+        
+        Set PCAP Settings
+        =================
+        ie: option 1
+        
+
+
+
+
+
+
+
+
+ADDING MORE
 

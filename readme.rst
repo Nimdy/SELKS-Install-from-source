@@ -44,8 +44,8 @@ Change directory to OPT
 =======================
 cd /opt/
 
-Pull GIT from Nimdy
-===================
+*Pull GIT from Nimdy*
+*===================*
 
 git clone https://github.com/Nimdy/SELKS-Install-from-source.git
 

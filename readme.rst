@@ -76,13 +76,14 @@ cd /opt/selks/Scripts/Setup
 Setup interface and mon Full Packet Capture settings
 ====================================================
 ./selks-first-time-setup.sh
-
-        Select interface you wish to receive network traffic
-        ====================================================
-        ie: eth1
         
-        Set PCAP Settings
-        =================
+        ======================================================
+        =Select interface you wish to receive network traffic=
+        ======================================================
+        ie: eth1
+        ===================
+        =Set PCAP Settings=
+        ===================
         ie: option 1
         
 
@@ -90,31 +91,29 @@ Setup interface and mon Full Packet Capture settings
 Verfiy services are running
 ===========================
 
-service kibana status
-service logstash status
-service elasticsearch status
-service suricata status
+systemctl status kibana logstash elasticsearch suricata
 
-        If there are any errors with kibana restart
-        ===========================================
+        ======================================================================================================================
+        =If there are any errors with kibana or any other service restart the service and review the logs, if issues continue=
+        ======================================================================================================================
         service kibana restart
         service kibana status
         
-
-Configure HOMENET for Suricata
-==============================
+================================
+=Configure HOMENET for Suricata=
+================================
 
 vi /etc/suricata/suricata.yaml
 
         Edit to reflect network range monitored:   HOME_NET: '[192.168.0.0/16,10.0.0.0/8,172.16.0.0./12]"
-        
-        Restart suricata service to reflect changes
-        ===========================================
+       =============================================
+       =Restart suricata service to reflect changes=
+       =============================================
         service suricata restart
         
-        
-Visit SELKS Scirius Dashboards to verify dashboards are setup and populating data
-=================================================================================
+===================================================================================        
+=Visit SELKS Scirius Dashboards to verify dashboards are setup and populating data=
+===================================================================================
 
 https://ipofSELKSinstall
 

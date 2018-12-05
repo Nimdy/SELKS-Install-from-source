@@ -29,17 +29,33 @@ Two NIC cards: One for management access and the other one for monitoring
 How to install
 ==============
 
-Update debian
 
-sudo apt-get update
+Update and upgrade debian
+=========================
 
+apt-get update
+apt-get upgrade
+
+Install GIT
+========================
 sudo apt-get install git
 
+Change directory to OPT
+=======================
 cd /opt/
+
+Pull GIT from Nimdy
+===================
 
 git clone https://github.com/Nimdy/SELKS-Install-from-source.git
 
-cd /SELKS/-Install-from-source
+Change directory
+================
+
+cd /SELKS-Install-from-source
+
+Change permissions to execute script
+====================================
 
 sudo chmod -x install_SELKS.sh
 

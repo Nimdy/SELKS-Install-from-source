@@ -12,7 +12,7 @@ Their GITHUB is: https://github.com/StamusNetworks
 
 
 =============
-This is a SOP to install SELKS from source and not from ISO, if you wish to use ISO:
+This is a how-to about installing SELKS from source and not from ISO, if you wish to use ISO:
 
 You can download ready to use images from the `SELKS download page <https://www.stamus-networks.com/open-source/#selks>`_.
     
@@ -97,6 +97,7 @@ service suricata status
         ===========================================
         service kibana restart
         service kibana status
+        
 
 Configure HOMENET for Suricata
 ==============================
@@ -110,10 +111,19 @@ vi /etc/suricata/suricata.yaml
         service suricata restart
         
         
-Visit SELKS Scirius
+Visit SELKS Scirius Dashboards
 
 https://ipofSELKSinstall
 
+Click Dashboards
+
+Click logstash-* 
+        Set as default index by clicking the star icon
+        
+Click Dashboards 
+
+        Click SN-ALL
+        
 
 
 NOT COMPLETE ADDING MORE

@@ -186,6 +186,10 @@ Visit Scirius dashboard and review alert.
 =    TWEAKS and breaking stuff maybe  =
 =======================================
 
+Visit: https://github.com/StamusNetworks/SELKS/wiki/SELKS-5.0-Beta1
+
+for more tips
+
 If you have a lot of ram, then feed the machine of logstash and elasticsearch.
 
 For example, if I had 16GB is ram. I would give 6 to logstash and 6 to elasticsearch

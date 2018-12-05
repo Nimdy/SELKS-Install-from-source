@@ -85,11 +85,36 @@ Setup interface and mon Full Packet Capture settings
         
 
 
+Verfiy services are running
+===========================
+
+service kibana status
+service logstash status
+service elasticsearch status
+service suricata status
+
+        If there are any errors with kibana restart
+        ===========================================
+        service kibana restart
+        service kibana status
+
+Configure HOMENET for Suricata
+==============================
+
+vi /etc/suricata/suricata.yaml
+
+        Edit to reflect network range monitored:   HOME_NET: '[192.168.0.0/16,10.0.0.0/8,172.16.0.0./12]"
+        
+        Restart suricata service to reflect changes
+        ===========================================
+        service suricata restart
+        
+        
+Visit SELKS Scirius
+
+https://ipofSELKSinstall
 
 
 
-
-
-
-ADDING MORE
+NOT COMPLETE ADDING MORE
 

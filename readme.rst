@@ -1,6 +1,6 @@
-================================================================================
-SELKS Ver5 Build from Source for AWS and AZURE Cloud Network Security Monitoring
-================================================================================
+==================================================================================
+=SELKS Ver5 Build from Source for AWS and AZURE Cloud Network Security Monitoring=
+==================================================================================
 
 Intro
 =====
@@ -13,12 +13,12 @@ Their GITHUB is: https://github.com/StamusNetworks
 Their SELKS WIKI: https://github.com/StamusNetworks/SELKS
 
 
-==============================================================================================================================
-This is a how-to about installing SELKS from source and not from ISO, if you wish to use ISO:
-
-You can download ready to use images from the `SELKS download page <https://www.stamus-networks.com/open-source/#selks>`_.
-
-==============================================================================================================================
+================================================================================================================================
+=This is a how-to about installing SELKS from source and not from ISO, if you wish to use ISO:                                 =      
+=                                                                                                                              =
+=You can download ready to use images from the `SELKS download page <https://www.stamus-networks.com/open-source/#selks>`_.    =
+=                                                                                                                              =                 
+================================================================================================================================
 
 
 Prerequisites

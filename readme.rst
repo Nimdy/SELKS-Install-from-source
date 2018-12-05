@@ -96,8 +96,8 @@ systemctl status kibana logstash elasticsearch suricata
         ======================================================================================================================
         =If there are any errors with kibana or any other service restart the service and review the logs, if issues continue=
         ======================================================================================================================
-        service kibana restart
-        service kibana status
+        systemctl restart kibana 
+        systemctl status kibana 
         
 ================================
 =Configure HOMENET for Suricata=
@@ -109,7 +109,7 @@ vi /etc/suricata/suricata.yaml
        =============================================
        =Restart suricata service to reflect changes=
        =============================================
-        service suricata restart
+        systemctl restart suricata
         
 ===================================================================================        
 =Visit SELKS Scirius Dashboards to verify dashboards are setup and populating data=

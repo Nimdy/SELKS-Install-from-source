@@ -172,6 +172,37 @@ systemctl restart networking
 
 
 
+=======================================
+=    TWEAKS and breaking stuff maybe  =
+=======================================
+
+If you have a lot of ram, then feed the machine of logstash and elasticsearch.
+
+For example, if I had 16GB is ram. I would give 6 to logstash and 6 to elasticsearch
+
+Edit 
+
+/etc/elasticsearch/jvm.options
+
+Change:
+
+-Xms1g
+-Xmx1g
+
+to
+
+-Xms6g
+-Xmx6g
+
+/etc/logstash/jvm.options
+
+-Xms1g
+-Xmx1g
+
+to
+
+-Xms6g
+-Xmx6g
 
 
 
@@ -179,5 +210,5 @@ not complete be instructions will get system running.  The hardest thing is ensu
 
 
 
-Need to format to Markup....
+Need to format to Markup and add more production tweaks....
 

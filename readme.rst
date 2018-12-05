@@ -111,7 +111,8 @@ vi /etc/suricata/suricata.yaml
         service suricata restart
         
         
-Visit SELKS Scirius Dashboards
+Visit SELKS Scirius Dashboards to verify dashboards are setup and populating data
+=================================================================================
 
 https://ipofSELKSinstall
 
@@ -123,6 +124,8 @@ Click logstash-*
 Click Dashboards 
 
         Click SN-ALL
+        
+
         
 
 

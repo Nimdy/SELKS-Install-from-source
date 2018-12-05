@@ -135,6 +135,42 @@ curl testmyids.com
 
 Visit Scirius dashboard and review alert.
  
+=======================================
+=Validate interface is in promisc mode=
+=======================================
+
+ifconfig
+
+if interface does not say promisc, then set it manually.
+
+=====================================
+= Configure /etc/network/interfaces =
+=====================================
+vi /etc/network/interface
+
+        ================================
+        = Replace or add the following =
+        ================================
+        auto eth1
+            iface eth1 inet manual
+            up ifconfig eth1 promisc up
+            down ifconfig eth1 promisc down
+            
+===================
+= safe file in vi =
+===================
+:wq!
+
+
+======================
+= restart networking =
+======================
+
+systemctl restart networking
+
+
+
+
 
 
 NOT COMPLETE ADDING MORE 

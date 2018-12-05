@@ -38,7 +38,7 @@ apt-get upgrade
 
 Install GIT
 ========================
-sudo apt-get install git
+sudo apt-get install -y git
 
 Change directory to OPT
 =======================

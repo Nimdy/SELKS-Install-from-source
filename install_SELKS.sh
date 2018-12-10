@@ -269,6 +269,19 @@ echo "" >> /etc/crontab
 # Set up the host name
 echo "SELKS" > /etc/hostname
 
+#Copy files into SELKS directory for admin controls
+
+cp /usr/bin/selks-reconfigure-listening-interface_stamus.sh /opt/selks/Scripts/Setup/reconfigure-listening-interface_stamus.sh
+cp /usr/bin/selks-db-logs-cleanup_stamus.sh /opt/selks/Scripts/Setup/
+cp /usr/bin/selks-first-time-setup_stamus.sh /opt/selks/Scripts/Setup/
+cp /usr/bin/selks-molochdb-init-setup_stamus.sh /opt/selks/Scripts/Setup/
+cp /usr/bin/selks-setup-ids-interface.sh /opt/selks/Scripts/Setup/
+cp /usr/bin/selks-upgrade_stamus.sh /opt/selks/Scripts/Setup/
+cp /usr/bin/selks-idps-interface-tuneup_stamus /opt/selks/Scripts/Tuning/idps-interface-offloading_stamus.sh
+
+
+
+
 # Enable the ssh banners
 sed -i -e 's|\#Banner \/etc\/issue\.net|Banner \/etc\/issue\.net|'  /etc/ssh/sshd_config
 
@@ -282,6 +295,7 @@ apt-get -y remove bison  autoconf automake libc6-dev autotools-dev libpcap-dev l
 	ghostscript xmms2-core x11proto-core-dev linux-libc-dev \
 	rpm alien sane-utils libsane rpm2cpio \
 	libx11-dev libx11-doc m4
+
 
 apt-get autoremove -y
 apt-get clean && \

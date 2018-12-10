@@ -41,7 +41,7 @@ apt-get upgrade
 = Install GIT =
 ===============
 
-sudo apt-get install -y git
+sudo apt-get install -y git net-tools
 
 ===========================
 = Change directory to OPT =

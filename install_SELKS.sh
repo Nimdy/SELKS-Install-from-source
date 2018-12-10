@@ -301,3 +301,9 @@ apt-get autoremove -y
 apt-get clean && \
 cat /dev/null > ~/.bash_history && history -c
 
+echo "System needs to reboot to make changes, do you wish to continue?"
+select yn in "Yes" "No"
+case $yn in
+    Yes ) sudo reboot;;
+    No ) exit;;
+esac

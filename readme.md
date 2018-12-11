@@ -105,6 +105,7 @@ Select interface you wish to receive network traffic
 =
 
 > Select interface - ie: eth1
+
 > Select PCAP setting -  ie: option 1     
 
 

@@ -26,6 +26,12 @@ Debian 9.5+ Stretch
 Two NIC cards: One for management access and the other one for monitoring
 Coffee.... lots of coffee 
 
+=====================================
+= Add current user is in sudo group =
+=====================================
+
+usermod -aG sudo username
+
 ==================
 = How to install =
 ==================

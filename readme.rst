@@ -61,6 +61,14 @@ cd /opt/
 
 git clone https://github.com/Nimdy/SELKS-Install-from-source.git
 
+======================================================================
+= Pull GIT from SELKS for staging files required system config       =
+= The install script will copy these over to the correct directories =
+= and then ask you to reboot                                         =
+======================================================================
+
+git clone -b SELKS5 https://github.com/StamusNetworks/SELKS.git SELKS_CONFIGS
+
 ====================
 = Change directory =
 ====================

@@ -1,4 +1,4 @@
-#### SELKS Ver5 Build from Source for AWS and AZURE Cloud Network Security Monitoring 
+# SELKS Ver5 Build from Source for AWS and AZURE Cloud Network Security Monitoring 
 
 SELKS is a free and open source Debian (with LXDE X-window manager) based IDS/IPS platform 
 released under GPLv3 from Stamus Networks (https://www.stamus-networks.com).

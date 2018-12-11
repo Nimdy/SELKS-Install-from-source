@@ -195,6 +195,27 @@ Visit Scirius dashboard and review alert.
         systemctl restart networking
 
 
+======================================================
+=      Security in mind - Check STIGs                = 
+= Security Technical Implementation Guide for Debian =
+=        Download from Hardendlinux's GITHUB         =
+======================================================
+
+More info visit: https://github.com/hardenedlinux/STIG-4-Debian
+
+cd /opt/
+
+git clone https://github.com/hardenedlinux/STIG-4-Debian.git
+
+cd /opt/STIG-4-Debian
+
+chmod +x stig-4-debian.sh
+
+./stig-4-debian.sh -H
+
+
+
+
 
 =======================================
 =    TWEAKS and breaking stuff maybe  =

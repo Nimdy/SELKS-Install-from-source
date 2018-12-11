@@ -214,7 +214,10 @@ chmod +x stig-4-debian.sh
 ./stig-4-debian.sh -H
 
 
+More security steps and how-to:
+https://static.open-scap.org/ssg-guides/ssg-debian8-guide-index.html
 
+Yes, it is for Debian 8 however these recommendations work for Debian 9 as well
 
 
 =======================================

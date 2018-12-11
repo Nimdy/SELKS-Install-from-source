@@ -247,7 +247,7 @@ vi /etc/logstash/jvm.options
 
 
 
-#### Not complete but this how-to will get you up and running.  The hardest thing is ensuring that you are receiving traffic on the interface you setup. If you need help just ask... I will post more how-tos about piping traffic because AWS and AZURE want to hold tight to the network monitoring $$$$$ applications but it is do-able...just a few hacks.  If you have some issues google before asking... learning how to deploy a IDS on a system with ELK is awesome but sometimes you run into errors.  Most of these errors can be fixed by googling and fixing some type of config file. After you have it up and running, delete it and do it again.  Learning is run?!?
+#### Need help just ask. :)
 
 
 # SPECIAL Thanks to the SELKS team for helping me during my Azure nightmare and enabling me to build this how-to for others on the interwebz.

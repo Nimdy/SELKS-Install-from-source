@@ -279,7 +279,8 @@ cp /usr/bin/selks-setup-ids-interface.sh /opt/selks/Scripts/Setup/
 cp /usr/bin/selks-upgrade_stamus.sh /opt/selks/Scripts/Setup/
 cp /usr/bin/selks-idps-interface-tuneup_stamus /opt/selks/Scripts/Tuning/idps-interface-offloading_stamus.sh
 
-
+#Copy over the configurations for logstash and others. Required for best performance. 
+sudo cp -r /opt/SELKS_CONFIGS/staging/etc/ /etc/
 
 
 # Enable the ssh banners

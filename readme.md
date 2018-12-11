@@ -53,7 +53,7 @@ Change directory to OPT
 cd /opt/
 ```
 
-Pull GIT from Nimdy
+Cone GIT from Nimdy
 =
 ```sh
 git clone https://github.com/Nimdy/SELKS-Install-from-source.git

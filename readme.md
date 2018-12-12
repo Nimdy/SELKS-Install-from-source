@@ -219,11 +219,10 @@ https://static.open-scap.org/ssg-guides/ssg-debian8-guide-index.html
 TWEAKS and breaking stuff maybe
 =
 
->Visit: https://github.com/StamusNetworks/SELKS/wiki/SELKS-5.0-Beta1 for more tips.
->Visit: https://github.com/StamusNetworks/SELKS/wiki/Tuning-SELKS for fine tuning SELKS
+> Visit: https://github.com/StamusNetworks/SELKS/wiki/SELKS-5.0-Beta1 for more tips.
 
->If you have a lot of ram, then feed the machine of logstash and elasticsearch.
->For example, if I had 16GB is ram. I would give 6 to logstash and 6 to elasticsearch
+> Visit: https://github.com/StamusNetworks/SELKS/wiki/Tuning-SELKS for fine tuning SELKS
+
 
 
 #### Need help just ask. :)

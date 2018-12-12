@@ -220,31 +220,10 @@ TWEAKS and breaking stuff maybe
 =
 
 >Visit: https://github.com/StamusNetworks/SELKS/wiki/SELKS-5.0-Beta1 for more tips.
+>Visit: https://github.com/StamusNetworks/SELKS/wiki/Tuning-SELKS for fine tuning SELKS
 
 >If you have a lot of ram, then feed the machine of logstash and elasticsearch.
 >For example, if I had 16GB is ram. I would give 6 to logstash and 6 to elasticsearch
-
-# Edit  jvm.options for elasticsearch and logstash
-```sh
-vi /etc/elasticsearch/jvm.options
-```
-> Change:
-
-- -Xms1g
-- -Xmx1g
->to
-- -Xms6g
-- -Xmx6g
-```sh
-vi /etc/logstash/jvm.options
-```
-> change 
-- -Xms1g
-- -Xmx1g
->to
-- -Xms6g
-- -Xmx6g
-
 
 
 #### Need help just ask. :)

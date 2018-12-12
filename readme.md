@@ -25,7 +25,7 @@ You can download ready to use images from the SELKS download page https://www.st
 - Coffee.... lots of coffee 
 
 
- Add current user is in sudo group 
+ Add current user is in sudo group if not running dangerously in root ^_-
 =
 
 -  usermod -aG sudo username

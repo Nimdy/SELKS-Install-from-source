@@ -269,15 +269,6 @@ echo "" >> /etc/crontab
 # Set up the host name
 echo "SELKS" > /etc/hostname
 
-#Copy files into SELKS directory for admin controls
-
-cp /usr/bin/selks-reconfigure-listening-interface_stamus.sh /opt/selks/Scripts/Setup/reconfigure-listening-interface_stamus.sh
-cp /usr/bin/selks-db-logs-cleanup_stamus.sh /opt/selks/Scripts/Setup/
-cp /usr/bin/selks-first-time-setup_stamus.sh /opt/selks/Scripts/Setup/
-cp /usr/bin/selks-molochdb-init-setup_stamus.sh /opt/selks/Scripts/Setup/
-cp /usr/bin/selks-setup-ids-interface.sh /opt/selks/Scripts/Setup/
-cp /usr/bin/selks-upgrade_stamus.sh /opt/selks/Scripts/Setup/
-cp /usr/bin/selks-idps-interface-tuneup_stamus /opt/selks/Scripts/Tuning/idps-interface-offloading_stamus.sh
 
 #Copy over the configurations for logstash and others. Required for best performance. 
 cd /opt/SELKS_CONFIGS/staging/etc/

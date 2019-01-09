@@ -92,7 +92,7 @@ After Succesfull Installation
 
 - Change root password, if required. Default password is StamusNetworks.
 ```sh
-cd /opt/selks/Scripts/Setup
+cd /usr/bin
 ```
 
 Setup interface and mon Full Packet Capture settings

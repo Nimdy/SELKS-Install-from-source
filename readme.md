@@ -106,11 +106,17 @@ Select interface you wish to receive network traffic
 
 > Select interface - ie: eth1
 
-> Select PCAP setting -  ie: option 1     
+> Select PCAP setting -  ie: option 1 
 
 
+# Check for SELKS upgrades
 
-Verfiy services are running
+```sh
+cd /usr/bin
+./selks-upgrade_stamus.sh
+```
+
+# Verfiy services are running
 =
 
 ```sh

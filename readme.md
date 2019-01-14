@@ -216,7 +216,7 @@ https://static.open-scap.org/ssg-guides/ssg-debian8-guide-index.html
 
 
 
-TWEAKS and breaking stuff maybe
+SELKS Master WIKI - This has a ton of great information!
 =
 
 > Visit: https://github.com/StamusNetworks/SELKS/wiki/SELKS-5.0-Beta1 for more tips.

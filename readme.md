@@ -225,7 +225,7 @@ https://static.open-scap.org/ssg-guides/ssg-debian8-guide-index.html
 SELKS Master WIKI - This has a ton of great information!
 =
 
-> Visit: https://github.com/StamusNetworks/SELKS/wiki/SELKS-5.0-Beta1 for more tips.
+> Visit: https://github.com/StamusNetworks/SELKS/wiki/SELKS-5.0-RC1 for more tips.
 
 > Visit: https://github.com/StamusNetworks/SELKS/wiki/Tuning-SELKS for fine tuning SELKS
 

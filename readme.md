@@ -38,8 +38,8 @@ Install time!!!
 Update and upgrade debian
 =
 ```sh
-apt-get update
-apt-get upgrade
+sudo apt update
+sudo apt upgrade
 ```
 Install GIT 
 =
@@ -56,7 +56,7 @@ cd /opt/
 Clone GIT from Nimdy
 =
 ```sh
-git clone https://github.com/Nimdy/SELKS-Install-from-source.git
+sudo git clone https://github.com/Nimdy/SELKS-Install-from-source.git
 ```
 
 
@@ -65,7 +65,7 @@ git clone https://github.com/Nimdy/SELKS-Install-from-source.git
  ##### The install script will copy these over to the correct directories and then ask you to reboot
 
 ```sh 
-git clone -b SELKS5 https://github.com/StamusNetworks/SELKS.git SELKS_CONFIGS
+sudo git clone -b SELKS5 https://github.com/StamusNetworks/SELKS.git SELKS_CONFIGS
 ```
 
 Change directory
@@ -79,6 +79,12 @@ Change permissions to execute script
 ```sh
 sudo chmod -x install_SELKS.sh
 ```
+Execute script
+=
+```sh
+sudo ./install_SELKS.sh
+```
+
 During install you might be asked a question about Scirius database related information:
 =
 ```

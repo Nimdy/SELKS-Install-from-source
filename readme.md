@@ -71,13 +71,13 @@ sudo git clone -b SELKS5 https://github.com/StamusNetworks/SELKS.git SELKS_CONFI
 Change directory
 =
 ```sh
-cd /SELKS-Install-from-source
+cd SELKS-Install-from-source
 ```
 
 Change permissions to execute script
 =
 ```sh
-sudo chmod -x install_SELKS.sh
+sudo chmod +x install_SELKS.sh
 ```
 Execute script
 =

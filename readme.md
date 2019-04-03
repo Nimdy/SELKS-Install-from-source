@@ -104,7 +104,7 @@ cd /usr/bin
 Setup interface and mon Full Packet Capture settings
 =
 ```sh
-./selks-first-time-setup.sh
+./selks-first-time-setup
 ```        
 
 Select interface you wish to receive network traffic
@@ -119,7 +119,7 @@ Select interface you wish to receive network traffic
 
 ```sh
 cd /usr/bin
-./selks-upgrade_stamus.sh
+./selks-upgrade_stamus
 ```
 
 # Verfiy services are running

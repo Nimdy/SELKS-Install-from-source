@@ -65,7 +65,8 @@ sudo git clone https://github.com/Nimdy/SELKS-Install-from-source.git
  ##### The install script will copy these over to the correct directories and then ask you to reboot
 
 ```sh 
-sudo git clone -b SELKS5 https://github.com/StamusNetworks/SELKS.git SELKS_CONFIGS
+sudo git clone https://github.com/StamusNetworks/SELKS.git SELKS_CONFIGS
+
 ```
 
 Change directory

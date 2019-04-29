@@ -207,6 +207,13 @@ Restart networking
         systemctl restart networking
 ```
 
+## Upgrade Kernel for CIFS SMB3 because Debian 9 4.9 does not allow SMB3 connections. This upgrade will push you over the 4.11 requirement and upgrade you to 4.19
+```sh
+apt -t stretch-backports upgrade
+```
+Say yes to all
+
+Reboot
 
 ## Security in mind - Check STIGs                
 ### Security Technical Implementation Guide for Debian 

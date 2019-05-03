@@ -62,7 +62,7 @@ sudo git clone https://github.com/Nimdy/SELKS-Install-from-source.git
 
  Clone GIT from SELKS for staging files required system config  
  =
- ##### The install script will copy these over to the correct directories and then ask you to reboot
+ ##### The install script copies the SELKS staging files for later use. After the install is complete, do a system reboot.
 
 ```sh 
 sudo git clone https://github.com/StamusNetworks/SELKS.git SELKS_CONFIGS
@@ -216,17 +216,9 @@ Say yes to all
 Reboot
 
 ## Security in mind - Check STIGs                
-### Security Technical Implementation Guide for Debian 
-> Download from Hardendlinux's GITHUB 
->More info visit: https://github.com/hardenedlinux/STIG-4-Debian
+#### SCAP Security Guide implements security guidances recommended by respected authorities, namely PCI DSS, STIG, and USGCB. SCAP Security Guide transforms these security guidances into a machine readable format which then can be used by OpenSCAP to audit your system. 
 
-```sh
-cd /opt/
-git clone https://github.com/hardenedlinux/STIG-4-Debian.git
-cd /opt/STIG-4-Debian
-chmod +x stig-4-debian.sh
-./stig-4-debian.sh -H
-```
+https://www.open-scap.org/security-policies/scap-security-guide/
 
 # More security steps and how-to:
 ```sh

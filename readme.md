@@ -218,14 +218,9 @@ Reboot
 ## Security in mind - Check STIGs                
 #### SCAP Security Guide implements security guidances recommended by respected authorities, namely PCI DSS, STIG, and USGCB. SCAP Security Guide transforms these security guidances into a machine readable format which then can be used by OpenSCAP to audit your system. 
 
-https://www.open-scap.org/security-policies/scap-security-guide/
-
-# More security steps and how-to:
 ```sh
-https://static.open-scap.org/ssg-guides/ssg-debian8-guide-index.html
+https://www.open-scap.org/security-policies/scap-security-guide/
 ```
-> Yes, it is for Debian 8 however these recommendations work for Debian 9 as well
-
 
 
 SELKS Master WIKI - This has a ton of great information!

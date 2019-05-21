@@ -17,6 +17,14 @@ libjansson4 libnss3-dev libnspr4-dev libgeoip1 libgeoip-dev rsync mc python-daem
 python-crypto libgmp10 libyaml-0-2 python-simplejson python-pygments python-yaml ssh sudo tcpdump nginx openssl jq patch \
 python-pip debian-installer-launcher live-build apt-transport-https ethtool
 
+
+
+# Copyright Stamus Networks, 2019
+# All rights reserved
+# Debian Live/Install ISO script - oss@stamus-networks.com
+#
+# Please run on Debian Stretch
+
 set -ex
 
 # Setting up the LIVE root (during install on disk it is preseeded)
@@ -59,12 +67,9 @@ EOF
 
 mkdir -p  /opt/selks/
 
-
-  
-
 ### START JAVA for ELK ###
 
-
+apt-get update && \
 apt-get install -y ca-certificates-java openjdk-8-jre-headless \
 openjdk-8-jdk openjdk-8-jre openjdk-8-jre-headless
 
@@ -118,7 +123,7 @@ apt-get install -y scirius
 sed -i 's/ELASTICSEARCH_VERSION = 5/ELASTICSEARCH_VERSION = 6/g' /etc/scirius/local_settings.py
 sed -i 's/KIBANA_VERSION=4/KIBANA_VERSION = 6/g' /etc/scirius/local_settings.py
 sed -i 's/KIBANA_INDEX = "kibana-int"/KIBANA_INDEX = ".kibana"/g' /etc/scirius/local_settings.py
-sed -i 's/KIBANA_DASHBOARDS_PATH = "\/opt\/selks\/kibana5-dashboards\/"/KIBANA_DASHBOARDS_PATH = "\/opt\/selks\/kibana6-dashboards\/"/g' /etc/scirius/local_settings.py
+sed -i 's/KIBANA_DASHBOARDS_PATH = "\/opt\/selks\/kibana5-dashboards\/"/KIBANA6_DASHBOARDS_PATH = "\/opt\/selks\/kibana6-dashboards\/"/g' /etc/scirius/local_settings.py
 echo "ELASTICSEARCH_KEYWORD = \"keyword\"" >> /etc/scirius/local_settings.py
 
 
@@ -160,6 +165,41 @@ server {
 
     location /app/moloch/ {
         proxy_pass https://127.0.0.1:8005;
+        proxy_redirect off;
+    }
+
+    location /plugins/ {
+        proxy_pass http://127.0.0.1:5601/plugins/;
+        proxy_redirect off;
+    }
+
+    location /dlls/ {
+        proxy_pass http://127.0.0.1:5601/dlls/;
+        proxy_redirect off;
+    }
+
+    location /socket.io/ {
+        proxy_pass http://127.0.0.1:5601/socket.io/;
+        proxy_redirect off;
+    }
+
+    location /dataset/ {
+        proxy_pass http://127.0.0.1:5601/dataset/;
+        proxy_redirect off;
+    }
+
+    location /translations/ {
+        proxy_pass http://127.0.0.1:5601/translations/;
+        proxy_redirect off;
+    }
+
+    location ^~ /built_assets/ {
+        proxy_pass http://127.0.0.1:5601/built_assets/;
+        proxy_redirect off;
+    }
+
+    location /ui/ {
+        proxy_pass http://127.0.0.1:5601/ui/;
         proxy_redirect off;
     }
 
@@ -214,8 +254,8 @@ chmod g+w /var/run/suricata/ -R
 mkdir -p /opt/molochtmp
 cd /opt/molochtmp/ && \
 apt-get update && apt-get install -y libjson-perl libyaml-dev libcrypto++6 libwww-perl
-wget https://files.molo.ch/builds/ubuntu-18.04/moloch_1.6.1-1_amd64.deb
-dpkg -i moloch_1.6.1-1_amd64.deb
+wget https://files.molo.ch/builds/ubuntu-18.04/moloch_1.7.1-1_amd64.deb
+dpkg -i moloch_1.7.1-1_amd64.deb
 
 cd /opt/
 rm /opt/molochtmp -r
@@ -269,15 +309,17 @@ echo "" >> /etc/crontab
 # Set up the host name
 echo "SELKS" > /etc/hostname
 
-
-#Copy over the configurations for logstash and others. Required for best performance. 
-cd /opt/SELKS_CONFIGS/staging/etc/
-sudo cp -R * /etc
-
-
-
 # Enable the ssh banners
 sed -i -e 's|\#Banner \/etc\/issue\.net|Banner \/etc\/issue\.net|'  /etc/ssh/sshd_config
+
+
+# Edit the Icon "Install Debian Stretch" name on a Live Desktop 
+# to "Install SELKS"
+sed -i -e 's|Name\=Install Debian sid|Name\=Install SELKS|'  /usr/share/applications/debian-installer-launcher.desktop 
+
+# Install exception for local certificate
+certutil -A -n SELKS -t "P,p,p"  -i /etc/nginx/ssl/scirius.crt  -d /etc/iceweasel/profile/
+chmod a+r /etc/iceweasel/profile/*db
 
 apt-get update && \
 apt-get install -y linux-headers-amd64
@@ -290,11 +332,10 @@ apt-get -y remove bison  autoconf automake libc6-dev autotools-dev libpcap-dev l
 	rpm alien sane-utils libsane rpm2cpio \
 	libx11-dev libx11-doc m4
 
-
 apt-get autoremove -y
 apt-get clean && \
 cat /dev/null > ~/.bash_history && history -c
 
+
 echo "System needs to reboot to make changes, please reboot and execute selks-first-time-install?"
 
-esac

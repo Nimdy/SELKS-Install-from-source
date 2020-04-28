@@ -5,6 +5,7 @@
 # Debian Live/Install ISO script - oss@stamus-networks.com
 # Modified by Nimdy for AWS, AZURE, Home labs, and anything else I suppose
 # Please run on Debian Stretch
+#Updated.... for 2020
 
 ##ADD required deps
 
